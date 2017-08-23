@@ -1,4 +1,5 @@
 class AlbumsController < ApplicationController
+  # All the records are fetched from AlbumDattable.
   def index
     respond_to do |format|
       format.html
@@ -6,12 +7,15 @@ class AlbumsController < ApplicationController
     end
   end
 
+  # This is where first application loads from.
   def home; end
 
+  # Show a new template for creating record.
   def new
     @album = Album.new
   end
 
+  # Create album.
   def create
     if Album.create(album_params)
       path = albums_path
@@ -27,6 +31,7 @@ class AlbumsController < ApplicationController
     @method = 'PUT'
   end
 
+  # Update the album record.
   def update
     @album = Album.find(params[:id])
     if @album.update(album_params)
@@ -39,6 +44,7 @@ class AlbumsController < ApplicationController
     redirect_to path
   end
 
+  # Upload album data from CSV file.
   def upload
     result = FileUploadService.new(upload_params).create
     if result[:status] == 'failed'
