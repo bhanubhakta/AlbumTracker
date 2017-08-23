@@ -1,24 +1,30 @@
 # README
+This is a simple CRUD application to keep track of the albums and their associated metadata. For now there are only five fields stored which are atrist, album, title, year and record_condition.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+On the landing page of the application, there are two options to record the album details. You can either create a new redord manually entering data into a web form or you can prepare a CSV and upload all the data in bulk.
 
-Things you may want to cover:
+Once the records are created there is a listing page where you can sort the records per field. Also there is a global search which can filter based on the search criteria. You can type values of any fields, it will search on those results and filter out the specific record.
 
-* Ruby version
+Enhancements that can be done:
 
-* System dependencies
+1. Filter can be kept on the listing page. The filter can be applied to filter all the records with certain record_condition or year. However that can be achieved via search now.
 
-* Configuration
+2. We can add certain other fields like genre, catagory or make these fields taggable.
 
-* Database creation
+3. We can make this application usable to a lot of users by adding a user registration and login module. There will be an association between user and album. User has many albums.
 
-* Database initialization
+4. The video links can also be uploaded if we have any (youtube). So that one can directly open the link from the application itself.
 
-* How to run the test suite
+To run the application:
 
-* Services (job queues, cache servers, search engines, etc.)
+1. Go to application folder
+2. Run bundle install
+3. Run rails s
+4. open localhost:3000
+5. Enjoy the features
 
-* Deployment instructions
+OR
 
-* ...
+You can look over the deployed application in heroku.
+
+url: https://fathomless-brook-96852.herokuapp.com/
