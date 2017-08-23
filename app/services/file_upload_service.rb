@@ -5,6 +5,7 @@ class FileUploadService
 
   def create
     begin
+      binding.pry
       # read CSV
       rows = CSV.read(@file.path)
       # convert headers
