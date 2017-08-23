@@ -19,9 +19,11 @@ To run the application:
 
 1. Go to application folder
 2. Run bundle install
-3. Run rails s
-4. open localhost:3000
-5. Enjoy the features
+3. Rub bundle exec rake db:migrate
+4. Run rails s
+5. open localhost:3000
+6. Enjoy the features
+7. Run tests using bundle exec rake rspec spec
 
 OR
 
