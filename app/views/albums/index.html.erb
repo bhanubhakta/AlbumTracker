@@ -1,0 +1,21 @@
+<div class="container albums-index">
+  <h3 style="margin-top: 64px">
+    List of Albums
+    <%= link_to 'Create new album', new_album_path, class: 'btn btn-success btn-large pull-right' %>
+  </h3>
+  <br/>
+  <table id="albums-table", data-source="<%= albums_path(format: :json) %>" class = "table table-striped">
+    <thead>
+      <tr>
+        <th>Artist</th>
+        <th>Album</th>
+        <th>Title</th>
+        <th>Year</th>
+        <th>Record Condition</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</div>
