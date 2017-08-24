@@ -11,6 +11,9 @@ jQuery(document).on('turbolinks:load', function() {
 
   // Set up datatable.
   var table = $('#albums-table').dataTable({
+    "search": {
+      "caseInsensitive": false
+    },
     "processing": true,
     "serverSide": true,
     "sAjaxSource": $('#albums-table').data('source'),
